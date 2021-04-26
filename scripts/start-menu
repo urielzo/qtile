@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# basic menu activated from the top left
+
+CHOICE="$(echo ':b Applications
+:b Settings
+:b Terminal
+:b Info
+:g Documentation
+:b Keybindings
+:r Shutdown
+:r Close menu' | instantmenu -i -bw 4 -w -1 -h -1 -n -l 10 -x 0 -F -a 0)"
+
+[ -z "$CHOICE" ] && exit
+
+echo "$CHOICE"
+case "$CHOICE" in
+*Applications)
+    sleep 0.05
+    appmenu &
+    ;;
+*Settings)
+    instantsettings &
+    ;;
+*Info)
+    st -e sh -c 'neofetch && echo -ne "$(cat /usr/share/instantutils/thanks.txt | sed "s/^/   /g")" && sleep 60m' &
+    ;;
+*Shutdown)
+    instantshutdown &
+    ;;
+*Terminal)
+    st &
+    ;;
+*Documentation)
+    firefox 'https://instantos.github.io/instantos.github.io/documentation' &
+    ;;
+*Keybindings)
+    st -e instanthotkeys &
+    ;;
+*menu)
+    echo "closed menu"
+    ;;
+*)
+    echo "other choice"
+    instantmenu_smartrun "startmenu" "$CHOICE"
+    ;;
+esac
+
+exit

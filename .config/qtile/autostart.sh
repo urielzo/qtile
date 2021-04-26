@@ -5,4 +5,5 @@ nitrogen --restore &
 picom --experimental-backends &
 volumeicon &
 nm-applet &
+conky -c ~/.conkyrc &
 

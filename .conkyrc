@@ -1,0 +1,67 @@
+--[[
+	Created by Brad Heffernan for Hefftor Edition
+]]
+
+conky.config = {
+	background = true,
+	update_interval = 1,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	temperature_unit = celsius,
+
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
+
+	gap_x = -90,
+	gap_y = 30,
+
+	minimum_width = 680,
+
+	own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	alignment = 'top_right',
+
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	default_bar_width = 280,
+	default_bar_height = 3,
+	default_outline_color = 'FFFFFF',
+
+	override_utf8_locale = true,
+	use_xft = true,
+	font = 'Fivo Sans Thin:size=8',
+	xftalpha = 0.8,
+	uppercase = false,
+
+	default_color = 'FFFFFF',
+	color1 = 'FFFFFF',
+	color2 = 'dda9bf',
+	color3 = '401343',
+	color4 = 'fae4df',
+	color5 = 'e6d5ec',
+
+
+}
+
+conky.text = [[
+${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %I:%M}${font}${voffset -84}${offset 10}${color 555555}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -148}${time %A}${font}
+${voffset 10}${offset 12}${font Ubuntu:pixelsize=12}${color EEEEEE}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color 555555}RAM ${offset 9}$color$mem / $memmax${offset 30}${color 555555}CPU ${offset 9}$color${cpu cpu0}%
+
+
+
+]];
+
+
+
+
+
