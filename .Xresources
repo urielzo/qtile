@@ -1,0 +1,135 @@
+!  ██╗░░██╗██████╗░███████╗███████╗░██████╗░██╗░░░██╗██████╗░░██████╗███████╗███████╗
+!  ╚██╗██╔╝██╔══██╗██╔════╝██╔════╝██╔═══██╗██║░░░██║██╔══██╗██╔════╝██╔════╝██╔════╝
+!  ░╚███╔╝░██████╔╝█████╗░░███████╗██║░░░██║██║░░░██║██████╔╝██║░░░░░█████╗░░███████╗
+!  ░██╔██╗░██╔══██╗██╔══╝░░╚════██║██║░░░██║██║░░░██║██╔══██╗██║░░░░░██╔══╝░░╚════██║
+!  ██╔╝░██╗██║░░██║███████╗███████║╚██████╔╝╚██████╔╝██║░░██║╚██████╗███████╗███████║
+!  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░╚═════╝░░╚═════╝░╚═╝░░╚═╝░╚═════╝╚══════╝╚══════╝
+
+
+!  ░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
+!  ░█░░░█░█░█░░░█░█░█▀▄░▀▀█
+!  ░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
+
+URxvt*depth: 32
+
+*foreground:        #
+*background:        #b4eeff
+*.foreground:       #334485
+*.background:       #b4eeff
+
+URxvt*foreground:   #334485
+URxvt*background:   [50]#b4eeff
+URxvt*cursorColor:  #66c31b
+URxvt*borderColor:  [50]#b4eeff
+
+! special
+*.cursorColor:  #66c31b
+
+! black
+*.color0:       #1c1c1c
+*.color8:       #1c1c1c
+
+! red
+*.color1:       #b24144
+*.color9:       #b24144
+
+! green
+*.color2:       #339900
+*.color10:      #339900
+
+! yellow
+*.color3:       #ff9900
+*.color11:      #ff9900
+
+! blue
+*.color4:       #4898e8
+*.color12:      #4898e8
+
+! magenta
+*.color5:       #7744BB
+*.color13:      #7744BB
+
+! cyan
+*.color6:       #0099aa
+*.color14:      #0099aa
+
+! white
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+
+!  ░█▀▀░█▀█░█▀█░▀█▀░█▀▀
+!  ░█▀▀░█░█░█░█░░█░░▀▀█
+!  ░▀░░░▀▀▀░▀░▀░░▀░░▀▀▀
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rightScrollBar: rgb
+Xft.autohint: true
+Xft.hintstyle: full
+Xft.lcdfilter: lcddefault
+
+!  ░█░█░█▀▄░█░█░█░█░▀█▀
+!  ░█░█░█▀▄░▄▀▄░▀▄▀░░█░
+!  ░▀▀▀░▀░▀░▀░▀░░▀░░░▀░
+
+URxvt.cursorBlink: 1
+URxvt.font: xft:novamono for powerline:pixelsize=10:antialias=true,xft:novamono for powerline
+URxvt.boldFont: xft:novamono for powerline:pixelsize=10:weight=bold:antialias=true,xft:novamono for powerline
+URxvt.italicFont: xft:novamono for powerline:pixelsize=10:weight=italic:antialias=true,xft:novamono for powerline
+
+URxvt.lineSpace: 0
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.internalBorder: 22
+URxvt.geometry: 72x24
+URxvt.thickness: 5
+URxvt.titleBar: true
+URxvt.intensityStyles: false
+URxvt.scrollTtyKeypress: true
+URxvt.scrollTtyOutput: true
+URxvt.cursorUnderline: true
+URxvt*allow_bold: true
+URxvt*iso14755: False
+
+URxvt.perl-ext-common: fullscreen,resize-font,matcher,clipboard
+URxvt.keysym.F11: perl:fullscreen:switch
+URxvt.keysym.C-Down: resize-font:smaller
+URxvt.keysym.C-Up: resize-font:bigger
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+
+!  ░█░█░▀█▀░█▀▀░█▀▄░█▄█
+!  ░▄▀▄░░█░░█▀▀░█▀▄░█░█
+!  ░▀░▀░░▀░░▀▀▀░▀░▀░▀░▀
+
+XTerm.termName: xterm-256color
+XTerm.vt100.locale: true
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+XTerm.vt100.saveLines: 16384
+XTerm.vt100.faceName: xft:MesloLGS NF:size=10.5:antialias=true
+XTerm.vt100.bellIsUrgent: true
+XTerm.letterSpace: 0
+XTerm.scaleHeight: 1.01
+XTerm.faceSize: 10
+XTerm.internalBorder: 32
+XTerm.vt100*geometry: 70x13
+XTerm.loginShell: true
+XTerm.charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+XTerm.eightBitInput: false
+
+! Rofi
+rofi.font: monospace 12
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #b4eeff, #1c1c1c, #b4eeff
+rofi.color-normal: #b4eeff, #1c1c1c, #b4eeff, #66c31b, #b4eeff
+rofi.color-urgent: argb:00000000, #66c31b, argb:00000000, argb:00000000, #334485
+rofi.color-active: argb:00000000, #1c1c1c, argb:00000000, argb:00000000, #334485
+rofi.kb-cancel: Escape,Alt+F1
