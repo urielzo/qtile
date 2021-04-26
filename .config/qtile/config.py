@@ -94,6 +94,12 @@ keys = [
         lazy.spawn("rofi -modi run,drun,window -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3"),
         desc="rofi ",
     ),
+    Key(
+        [mod, "shift"],
+        "d",
+        lazy.spawn("instantmenu_run"),
+        desc="instantos_menu ",
+    ),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle through layouts"),
     Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill active window"),
     Key([mod, "shift"], "c", lazy.shutdown(), desc="Shutdown Qtile"),
@@ -228,9 +234,9 @@ keys = [
     ),
     Key(
         [mod],
-        "space",
-        lazy.spawn("./.config/qtile/xmenu.sh"),
-        desc="Rofi quick notes",
+        "x",
+        lazy.spawn("hefflogout"),
+        desc="powermenu",
     ),
     Key(
         [],
@@ -428,8 +434,8 @@ def open_pavu():
 def open_powermenu():
     qtile.cmd_spawn("betterlockscreen -l dim")
 
-def open_instantsettings():
-    qtile.cmd_spawn("./.config/qtile/settings.sh")
+def open_instantstartmenu():
+    qtile.cmd_spawn("appmenu")
 
 
 screens = [
@@ -450,7 +456,7 @@ screens = [
                     font = "feather",
                     fontsize = 12,
                     padding = 5,
-                    mouse_callbacks = {"Button1": open_instantsettings},
+                    mouse_callbacks = {"Button1": open_instantstartmenu},
                  ),
                  widget.Sep(
                     linewidth=2,

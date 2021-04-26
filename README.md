@@ -10,7 +10,7 @@ qtile-config-files
 ![Dirty](/preview/Dirty.png)
 
 * Distro: [ArchLabs](https://archlabslinux.com/)
-* Window manager: [qtile]
+* Window manager: [qtile](http://www.qtile.org/)
 * Bar: [Stock Qtile]
 * Launcher: [Rofi](https://github.com/davatorium/rofi)
 * Compositor [picom](https://github.com/jonaburg/picom)
